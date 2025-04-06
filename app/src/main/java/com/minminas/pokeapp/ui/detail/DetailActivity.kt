@@ -11,7 +11,10 @@ class DetailActivity : ComponentActivity() {
         val name = intent.getStringExtra("pokeName") ?: ""
 
         setContent {
-            PokemonDetailScreen(name = name)
+            PokemonDetailScreen(
+                name = name,
+                onBackClick = { finish() }
+            )
         }
     }
 }
